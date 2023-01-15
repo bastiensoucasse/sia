@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+  <color name="background" value="0.0, 0.0, 0.0"/>
+
+  <!-- Use the flat color integrator -->
+  <integrator type="whitted">
+    <integer name="maxRecursion" value="4"/>
+  </integrator>
+
+  <sampler type="stratified">
+    <integer name="xPixelSamples" value="8"/>
+    <integer name="yPixelSamples" value="8"/>
+    <integer name="dimension" value="1"/>
+    <boolean name="jitter" value="true"/>
+  </sampler>
+
+  <!-- Render the scene as viewed by a perspective camera -->
+  <camera type="perspective">
+    <float name="fov" value="40.0" />
+    <integer name="width" value="600"/>
+    <integer name="height" value="400"/>
+    <transform name="toWorld">
+      <lookat target="2, 0, 0.5" origin="7, 0, 2" up="0, 0, 1"/>
+    </transform>
+  </camera>
+
+  <shape type="sphere">
+    <float name="radius" value="1"/>
+    <bsdf type="dielectric">
+      <color name="albedo" value="1.0, 1.0, 1.0" />
+      <float name="extIOR" value="1"/>
+      <float name="intIOR" value="1.52"/>
+    </bsdf>
+    <transform name="toWorld">
+      <translate value="0, -1.5, 0"/>
+    </transform>
+  </shape>
+
+  <shape type="sphere">
+    <float name="radius" value="1"/>
+    <bsdf type="mirror">
+      <color name="albedo" value="1.0, 1.0, 1.0" />
+    </bsdf>
+    <transform name="toWorld">
+      <translate value="0, 1.5, 0"/>
+    </transform>
+  </shape>
+
+  <shape type="quad">
+    <bsdf type="diffuse">
+      <color name="albedo" value="0.75, 0.75, 0.75" />
+      <string name="texture" value="checkboard.exr" />
+      <integer name="mode" value="0" />
+    </bsdf>
+    <transform name="toWorld">
+      <rotate angle="45" axis="0,0,1"/>
+      <translate value="0, 0, -1"/>
+    </transform>
+  </shape>
+
+  <light type="directionalLight">
+    <vector name="direction" value="-1, 0, -1" />
+    <color name="radiance" value="1.2, 1.2, 1.2" />
+  </light>
+
+
+</scene>

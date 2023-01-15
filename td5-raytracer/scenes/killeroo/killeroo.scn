@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+	<integrator type="whitted">
+		<integer name="maxRecursion" value="4"/>
+	</integrator>
+
+	<sampler type="stratified">
+		<integer name="xPixelSamples" value="4"/>
+		<integer name="yPixelSamples" value="4"/>
+		<integer name="maxDimension" value="1"/>
+		<boolean name="jitter" value="true"/>
+	</sampler>
+
+	<camera type="perspective">
+		<transform name="toWorld">
+			<lookat target="-0.25, -0.25, -0.15" origin="1.25, 0.5, -0.25" up="0, 1, 0"/>
+		</transform>
+		<float name="fov" value="40"/>
+		<integer name="width" value="700"/>
+		<integer name="height" value="600"/>
+	</camera>
+
+	<shape type="mesh">
+		<string name="filename" value="killeroo.obj"/>
+		<bsdf type="mirror">
+			<color name="albedo" value="0.8, 0.8, 0.8" />
+		</bsdf>
+	</shape>
+
+	<shape type="quad">
+		<bsdf type="diffuse">
+			<color name="albedo" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<rotate angle="-90" axis="1,0,0"/>
+			<rotate angle="45" axis="0,1,0"/>
+			<translate value="1.2, -0.38, 0"/>
+		</transform>
+	</shape>
+
+	<shape type="quad">
+		<bsdf type="diffuse">
+			<color name="albedo" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<rotate angle="135" axis="0,1,0"/>
+			<translate value="-1.5, 0.0, 0.75"/>
+		</transform>
+	</shape>
+
+	<shape type="quad">
+		<bsdf type="diffuse">
+			<color name="albedo" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<rotate angle="45" axis="0,1,0"/>
+			<translate value="-1.5, 0.0, -0.75"/>
+		</transform>
+	</shape>
+
+	<shape type="quad">
+		<bsdf type="diffuse">
+			<color name="albedo" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<rotate angle="90" axis="1,0,0"/>
+			<rotate angle="45" axis="0,1,0"/>
+			<translate value="1.2, 1, 0"/>
+		</transform>
+	</shape>
+
+	<shape type="quad">
+		<bsdf type="diffuse">
+			<color name="albedo" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<rotate angle="-45" axis="0,1,0"/>
+			<translate value="1.5, 0.0, -0.75"/>
+		</transform>
+	</shape>
+
+	<shape type="quad">
+		<bsdf type="diffuse">
+			<color name="albedo" value="1.0, 1.0, 1.0" />
+			<string name="texture" value="lines.exr" />
+			<integer name="mode" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<rotate angle="-135" axis="0,1,0"/>
+			<translate value="1.5, 0.0, 0.75"/>
+		</transform>
+	</shape>
+
+	<light type="pointLight">
+		<color name="radiance" value="2, 2, 2" />
+		<transform name="toWorld">
+			<translate value="0.1, 0.8, -0.1"/>
+		</transform>
+	</light>
+
+</scene>

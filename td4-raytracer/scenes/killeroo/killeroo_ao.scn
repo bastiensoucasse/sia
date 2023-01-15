@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+	<integrator type="ao">
+		<integer name="sampleCount" value="32"/>
+		<boolean name="cosineWeighted" value="true"/>
+	</integrator>
+
+	<sampler type="independent">
+		<integer name="sampleCount" value="32"/>
+	</sampler>
+
+	<!-- <sampler type="stratified">
+    <integer name="xPixelSamples" value="4"/>
+    <integer name="yPixelSamples" value="4"/>
+    <integer name="maxDimension" value="1"/>
+		<boolean name="jitter" value="true"/>
+ 	</sampler>  -->
+
+	<color name="background" value="0.0, 0.0, 0.0"/>
+
+	<camera type="perspective">
+		<transform name="toWorld">
+			<lookat target="-0.25, -0.25, -0.15" origin="1.25, 0.5, -0.25" up="0, 1, 0"/>
+		</transform>
+		<float name="fov" value="40"/>
+		<integer name="width" value="700"/>
+		<integer name="height" value="600"/>
+	</camera>
+
+	<shape type="mesh">
+		<string name="filename" value="killeroo.obj"/>
+		<bsdf type="diffuse">
+			<color name="diffuse" value="1.0, 1.0, 1.0" />
+		</bsdf>
+	</shape>
+
+
+</scene>

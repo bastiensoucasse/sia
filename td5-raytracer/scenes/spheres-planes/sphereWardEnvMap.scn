@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+  <color name="background" value="0.2, 0.2, 0.2"/>
+
+  <integrator type="direct_mats">
+    <integer name="sampleCount" value="100"/>
+    <boolean name="IS" value="true"/>
+  </integrator>
+
+  <sampler type="stratified">
+    <integer name="xPixelSamples" value="1"/>
+    <integer name="yPixelSamples" value="1"/>
+    <integer name="maxDimension" value="1"/>
+    <boolean name="jitter" value="false"/>
+  </sampler>
+
+  <camera type="perspective">
+    <float name="fov" value="90.0" />
+    <integer name="width" value="512"/>
+    <integer name="height" value="512"/>
+    <transform name="toWorld">
+      <lookat origin="-0.65, 0.0, 0.0" target="0, 0, 0" up="0, 1, 0"/>
+    </transform>
+  </camera>
+
+  <shape type="sphere">
+    <float name="radius" value="0.4"/>
+    <bsdf type="ward">
+      <color name="kd" value="0.0, 0.0, 0.0" />
+      <color name="ks" value="0.7, 0.7, 0.7" />
+      <float name="alphaX" value="0.01"/>
+      <float name="alphaY" value="0.01"/>
+    </bsdf>
+  </shape>
+
+  <light type="infiniteLight">
+    <string name="texture" value="../ennis.exr"/>
+  </light>
+
+</scene>

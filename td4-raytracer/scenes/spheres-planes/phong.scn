@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+  <color name="background" value="0.0, 0.0, 0.0"/>
+
+ <!-- Use the direct illumination integrator -->
+ <integrator type="direct"/>
+
+ <!-- Render the scene as viewed by a perspective camera -->
+ <camera type="perspective">
+   <float name="fov" value="45.0" /> 
+   <integer name="width" value="400"/>
+   <integer name="height" value="400"/>
+   <transform name="toWorld">
+     <rotate value="0, 0, 0, 1"/>
+     <translate value="0, -0, 8.0"/>
+   </transform>
+ </camera> 
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.0, 0.0, 0.0" />
+     <float name="exponent" value="4"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="-2.0, 2.0, 0.0"/>
+   </transform>
+ </shape>
+
+<shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="4"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="0.0, 2.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="8"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="2.0, 2.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="16"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="-2.0, 0.0, 0.0"/>
+   </transform>
+ </shape>
+ 
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="32"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="0.0, 0.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="64"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="2.0, 0.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="128"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="-2.0, -2.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="256"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="0.0, -2.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <shape type="sphere">
+   <float name="radius" value="0.9"/>
+   <bsdf type="phong">
+     <color name="kd" value="0.1, 0.4, 0.1" />
+     <color name="ks" value="0.6, 0.6, 0.6" />
+     <float name="exponent" value="512"/>
+   </bsdf>
+   <transform name="toWorld">
+     <translate value="2.0, -2.0, 0.0"/>
+   </transform>
+ </shape>
+
+ <light type="directionalLight">
+   <vector name="direction" value="-0.5, -0.5, -0.5" />
+   <color name="radiance" value="1.2, 1.2, 1.2" />
+ </light>
+
+</scene>
